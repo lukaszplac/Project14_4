@@ -71,8 +71,8 @@ var MoviesList = React.createClass({
 		list: React.PropTypes.array.isRequired
 	},
 	render: function() {
-		var elements = this.props.list.map(function(movie) {
-			return React.createElement(Movie, {movie: movie}, );
+		var elements = this.props.list.map(function(movie, index) {
+			return React.createElement(Movie, {movie: movie, key: index}, );
 		});
 		return React.createElement('div', {},
     		   React.createElement('h1', {}, 'Lista filmów'),
